@@ -18,11 +18,11 @@ class Cadastro extends Migration
             $table->string('id_agente');
             $table->string('senha');
 
-            $table->unsignedBigInteger('atuacao_id')->unsigned();
-            $table->foreign('atuacao_id')->references('id')->on('atuacao');
+            //$table->unsignedBigInteger('atuacao_id')->unsigned();
+            //$table->foreign('atuacao_id')->references('id')->on('atuacao');
             
-            $table->unsignedBigInteger('denuncia_id')->unsigned();
-            $table->foreign('denuncia_id')->references('id')->on('denuncia');
+            //$table->unsignedBigInteger('denuncia_id')->unsigned();
+            //$table->foreign('denuncia_id')->references('id')->on('denuncia');
         });
     }
 

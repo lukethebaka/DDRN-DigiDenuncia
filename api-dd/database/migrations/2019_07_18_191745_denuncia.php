@@ -16,14 +16,14 @@ class Denuncia extends Migration
         Schema::create('denuncia', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('titulo_denuncia');
-            $table->bit('status');
-            $table->longblob('imagem');
+            $table->boolean('status');
+            $table->binary('imagem');
 
-            $table->unsignedBigInteger('categoria_id')->unsigned();
-            $table->foreign('categoria_id')->references('id')->on('categoria');
+            //$table->unsignedBigInteger('categoria_id')->unsigned();
+            //$table->foreign('categoria_id')->references('id')->on('categoria');
 
-            $table->unsignedBigInteger('endereco_id')->unsigned();
-            $table->foreign('endereco_id')->references('id')->on('endereco');
+            //$table->unsignedBigInteger('endereco_id')->unsigned();
+            //$table->foreign('endereco_id')->references('id')->on('endereco');
         });
     }
 

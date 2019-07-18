@@ -13,13 +13,13 @@ class Atuacao extends Migration
      */
     public function up()
     {
-        Schema::create('cadastro', function (Blueprint $table) {
+        Schema::create('atuacao', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('id_agente');
             $table->string('senha');
 
-            $table->unsignedBigInteger('atuacao_id')->unsigned();
-            $table->foreign('atuacao_id')->references('id')->on('atuacao');
+            //$table->unsignedBigInteger('atuacao_id')->unsigned();
+            //$table->foreign('atuacao_id')->references('id')->on('atuacao');
         });
     }
 
