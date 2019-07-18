@@ -18,8 +18,13 @@ class Atuacao extends Migration
             $table->string('id_agente');
             $table->string('senha');
 
+<<<<<<< HEAD
             //$table->unsignedBigInteger('atuacao_id')->unsigned();
             //$table->foreign('atuacao_id')->references('id')->on('atuacao');
+=======
+            // $table->unsignedBigInteger('atuacao_id')->unsigned();
+            // $table->foreign('atuacao_id')->references('id')->on('atuacao');
+>>>>>>> d35fd2fc1b10508a43ce50840ee9b5e5ac799d5b
         });
     }
 
