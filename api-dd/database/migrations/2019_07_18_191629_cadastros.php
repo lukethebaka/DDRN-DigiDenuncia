@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Cadastro extends Migration
+class Cadastros extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Cadastro extends Migration
      */
     public function up()
     {
-        Schema::create('cadastro', function (Blueprint $table) {
+        Schema::create('cadastros', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('id_agente');
             $table->string('senha');
@@ -33,6 +33,6 @@ class Cadastro extends Migration
      */
     public function down()
     {
-        Schema::drop('cadastro');
+        Schema::drop('cadastros');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Denuncia extends Migration
+class Denuncias extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class Denuncia extends Migration
      */
     public function up()
     {
-        Schema::create('denuncia', function (Blueprint $table) {
+        Schema::create('denuncias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('titulo_denuncia');
+            $table->string('titulo_denuncias');
             $table->boolean('status');
             $table->binary('imagem');
 
@@ -34,6 +34,6 @@ class Denuncia extends Migration
      */
     public function down()
     {
-        Schema::drop('denuncia');
+        Schema::drop('denuncias');
     }
 }

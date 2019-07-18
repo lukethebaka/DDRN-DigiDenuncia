@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Categoria extends Migration
+class Atuacaos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class Categoria extends Migration
      */
     public function up()
     {
-        Schema::create('categoria', function (Blueprint $table) {
+        Schema::create('atuacaos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('categoria');
+            $table->string('id_agente');
+            $table->string('senha');
+
+            // $table->unsignedBigInteger('atuacaos_id')->unsigned();
+            // $table->foreign('atuacaos_id')->references('id')->on('atuacaos');
         });
     }
 
@@ -26,6 +30,6 @@ class Categoria extends Migration
      */
     public function down()
     {
-        Schema::drop('categoria');
+        Schema::drop('atuacaos');
     }
 }

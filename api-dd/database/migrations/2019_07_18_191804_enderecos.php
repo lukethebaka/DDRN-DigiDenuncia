@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Endereco extends Migration
+class Enderecos extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class Endereco extends Migration
      */
     public function up()
     {
-        Schema::create('endereco', function (Blueprint $table) {
+        Schema::create('enderecos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('rua');
             $table->string('bairro');
@@ -28,6 +28,6 @@ class Endereco extends Migration
      */
     public function down()
     {
-        Schema::drop('endereco');
+        Schema::drop('enderecos');
     }
 }
