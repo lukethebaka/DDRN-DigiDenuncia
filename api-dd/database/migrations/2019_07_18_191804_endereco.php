@@ -13,7 +13,7 @@ class Endereco extends Migration
      */
     public function up()
     {
-        Schema::create('denuncia', function (Blueprint $table) {
+        Schema::create('endereco', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('rua');
             $table->string('bairro');
