@@ -18,6 +18,8 @@ class Denuncias extends Migration
             $table->string('titulo_denuncias');
             $table->boolean('status');
             $table->binary('imagem');
+            $table->timestamps();
+
 
             // $table->unsignedBigInteger('categoria_id')->unsigned();
             // $table->foreign('categoria_id')->references('id')->on('categoria');

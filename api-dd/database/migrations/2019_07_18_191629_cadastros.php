@@ -17,6 +17,7 @@ class Cadastros extends Migration
             $table->bigIncrements('id');
             $table->string('id_agente');
             $table->string('senha');
+            $table->timestamps();
 
             // $table->unsignedBigInteger('atuacao_id')->unsigned();
             // $table->foreign('atuacao_id')->references('id')->on('atuacao');

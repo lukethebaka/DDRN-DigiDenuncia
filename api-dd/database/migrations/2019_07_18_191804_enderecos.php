@@ -18,6 +18,9 @@ class Enderecos extends Migration
             $table->string('rua');
             $table->string('bairro');
             $table->string('zona');
+            $table->timestamps();
+
+            
         });
     }
 
