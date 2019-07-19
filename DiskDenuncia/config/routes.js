@@ -4,7 +4,7 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 import Home from '../pages/map';
 import Login from '../pages/login';
 import History from '../pages/history';
-import Data from '../pages/login';
+import Statistics from '../pages/data';
 
 export default createAppContainer(createMaterialBottomTabNavigator({
   Home: {
@@ -28,8 +28,8 @@ export default createAppContainer(createMaterialBottomTabNavigator({
       // tabBarLabel: 'Mapa',
     }
   },
-  Data: {
-    screen: Data,
+  Statistics: {
+    screen: Statistics,
     navigationOptions: {
       // tabBarIcon: {},
       // tabBarLabel: 'Mapa',
