@@ -17,13 +17,11 @@ class Cadastros extends Migration
             $table->bigIncrements('id');
             $table->string('id_agente');
             $table->string('senha');
-            $table->timestamps();
-
-            // $table->int('atuacao_id')->unsigned();
-            // $table->foreign('atuacao_id')->references('id')->on('atuacao');
             
-            // $table->int('denuncia_id')->unsigned();
-            // $table->foreign('denuncia_id')->references('id')->on('denuncia');
+
+            $table->integer('atuacao_id')->unsigned();
+            $table->integer('denuncia_id')->unsigned();
+            $table->timestamps();
         });
     }
 

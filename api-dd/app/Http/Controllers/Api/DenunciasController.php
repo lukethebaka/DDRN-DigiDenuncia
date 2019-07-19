@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Denuncia;
+use App\Categoria;
+use App\Endereco;
 
 class DenunciasController extends Controller
 {
@@ -15,13 +17,19 @@ class DenunciasController extends Controller
 
     public function show(Denuncia $id)
     {
-        return $id;
+        return Denuncia::all($id);
     }
 
-    public function show_categoria(Denuncia $categoria)
+    public function getCategoria(Denuncia $categoria_id)
     {
-        return $categoria;
+        return Categoria::all($categoria_id);
     }
+
+    public function getEndereco(Denuncia $endereco_id)
+    {
+        return Endereco::all($endereco_id);
+    }
+
 
     public function store()
     {
@@ -29,6 +37,8 @@ class DenunciasController extends Controller
 
         $denuncia->titulo_denuncias = request('titulo_denuncias');
         $denuncia->status = request('status');
+        $denuncia->categoria_id = request('categoria_id');
+        $denuncia->endereco_id = request('endereco_id');
 
         $denuncia->save();
     }
@@ -39,6 +49,8 @@ class DenunciasController extends Controller
 
         $denuncia->titulo_denuncias = request('titulo_denuncias');
         $denuncia->status = request('status');
+        $denuncia->categoria_id = request('categoria_id');
+        $denuncia->endereco_id = request('endereco_id');
 
         $denuncia->save();
     }
