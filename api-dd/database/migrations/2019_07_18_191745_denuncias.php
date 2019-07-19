@@ -17,7 +17,7 @@ class Denuncias extends Migration
             $table->bigIncrements('id');
             $table->string('titulo_denuncias');
             $table->boolean('status');
-            $table->binary('imagem');
+            $table->binary('imagem')->nullable();
             $table->timestamps();
 
 

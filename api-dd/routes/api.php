@@ -21,8 +21,8 @@ Route::namespace('Api')->name('api.')->group(function(){
     Route::get('/denuncias', 'DenunciasController@index')->name('denuncias');
     Route::get('/denuncias/{categoria}', 'DenunciasController@show_categoria')->name('denuncias_categoria');
     Route::post('/denuncias', 'DenunciasController@store')->name('criar_denuncias');
-    Route::put('/denuncias/id', 'DenunciasController@update')->name('atualizar_denuncia');
-    Route::delete('/denuncias/id', 'DenunciasController@delete')->name('deleta_denuncia');
+    Route::put('/denuncias/{id}', 'DenunciasController@update')->name('atualizar_denuncia');
+    Route::delete('/denuncias/{id}', 'DenunciasController@delete')->name('deleta_denuncia');
 
     Route::get('/cadastros', 'CadastrosController@index')->name('cadastros');
     Route::post('/cadastros', 'CadastrosController@store')->name('criar_cadastro');
