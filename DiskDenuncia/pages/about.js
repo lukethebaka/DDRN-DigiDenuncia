@@ -1,63 +1,97 @@
 import React from 'react';
-import { StyleSheet, Image, Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 
-export default class About extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const styles = StyleSheet.create({
+  header: {
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '10%',
+    backgroundColor: '#363636',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerText: {
+    color: 'white',
+    fontSize: 23,
+    fontWeight: 'bold',
+  },
+  title: {
+    paddingHorizontal: 30,
+    backgroundColor: 'transparent',
+    color: '#363636',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'justify',
+    marginTop: 25,
+  },
+  titleSigilo: {
+    paddingHorizontal: 30,
+    marginTop: 10,
+    backgroundColor: 'transparent',
+    color: 'red',
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'left'
+  },
+  titleIcons: {
+    paddingHorizontal: 30,
+    backgroundColor: 'transparent',
+    color: '#363636',
+    fontSize: 15,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginVertical: 25,
+  },
+});
 
-  _navigate() {
-    this.props.navigation.navigate('Login');
-  }
+//fazer animação de chegar nessa página + seta para voltar [página será separada]
 
-  render() {
-    return (
-      <View style={{ flex: 1, paddingHorizontal: 10, paddingTop: '2%', justifyContent: 'center' }}>
-        <Text
-          style={{ fontSize: 16, fontWeight: 'bold', marginBottom: 10 }}
-        >
-          Serviço fornecido pela Secretaria de Estado da Segurança Pública e da Defesa Social (Sesed/RN).
-        </Text>
-        <View>
-          <Text
-            style={{ fontSize: 20, color: '#900', marginBottom: 10 }}
-          >
-            Sigilo Absoluto
-          </Text>
-        </View>
-        <Text
-          style={{ fontSize: 16 }}
-        >
-          O Disque Denúncia 181 é um importante canal de comunicação sigilosa entre a Secretaria de Segurança Pública e a população com foco no combate ao crime.
-        </Text>
-        <Text
-          style={{ fontSize: 16 }}
-        >
-          As denúncias são registradas em sistema informatizado que funciona 24 horas por dia.
-        </Text>
-        <Text
-          style={{ fontSize: 16 }}
-        >
-          Não é preciso se identificar e nenhuma informação do seu aparelho é registrado. O anonimato é garantido.
-        </Text>
+export default function App() {
+  return (
+    <View style={{flex: 1, backgroundColor: '#d6d6d6'}}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Informações</Text>
+      </View>
+      <ScrollView>
+        <Text style={styles.title}>Serviço fornecido pela Secretaria de Estado da Segurança Pública e da Defesa Social (Sesed/RN)</Text>
         <View
-          style={{ flex:1, alignItems: 'center', justifyContent: 'center',  }}
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginTop: 25,
+        }}
         >
-          <Image
-            source={require('../assets/icon.png')} //governo-logo
+          <Image 
+            source={require('../assets/sigilo.png')}
+            style={{
+              flex: 1,
+              width: 60,
+              height: 60,
+              resizeMode: 'contain'
+            }}
+          />
+          <Text style={styles.titleSigilo} >Sigilo Absoluto</Text>
+        </View>
+        <Text style={styles.title}>O Digi Denúncia é um canal de comunicação sigilosa entre a Secretaria de Segurança Pública e a população com foco no combate ao crime.</Text>
+        <Text style={styles.title}>As denúncias podem ser registradas neste sistema informatizado que funciona 24 horas por dia. Não é preciso se identificar e guardamos informações sobre o seu aparelho apenas para previnir trotes. O anonimato é garantido.</Text>
+        <View
+        style={{
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        >
+          <Image 
+            source={require('../assets/RN.png')}
+            style={{
+              flex: 1,
+              width: '100%',
+              resizeMode: 'contain'
+            }}
           />
         </View>
-        <View
-          style={{ justifyContent: 'flex-end' }}
-        >
-          <Button
-            onPress={this._navigate}
-          >
-            Acesso Restrito 
-          </Button>
-        </View>
-      </View>
-    );
-  }
+        <Text style={styles.titleIcons}>Icons provided by icons8.com</Text>
+      </ScrollView>
+    </View>
+  );
 }
