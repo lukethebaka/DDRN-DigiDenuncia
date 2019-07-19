@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { FloatingAction } from "react-native-floating-action";
 
 import MapView, { PROVIDER_DEFAULT, MAP_TYPES, Marker } from 'react-native-maps';
 
@@ -40,6 +41,14 @@ export default function App() {
           image={require('../assets/invasao.png')}
         />
       </MapView>
+      <View>
+        <FloatingAction
+          color='#c5161b'
+          onPressMain={ () => {
+            alert('selected button')
+          }}
+        />
+      </View>
     </View>
   );
 }
