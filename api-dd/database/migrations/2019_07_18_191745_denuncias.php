@@ -21,11 +21,11 @@ class Denuncias extends Migration
             $table->timestamps();
 
 
-            // $table->unsignedBigInteger('categoria_id')->unsigned();
-            // $table->foreign('categoria_id')->references('id')->on('categoria');
+            //  $table->unsignedBigInteger('categoria_id')->unsigned();
+            //  $table->foreign('categoria_id')->references('id')->on('categoria');
 
-            // $table->unsignedBigInteger('endereco_id')->unsigned();
-            // $table->foreign('endereco_id')->references('id')->on('endereco');
+            //  $table->unsignedBigInteger('endereco_id')->unsigned();
+            //  $table->foreign('endereco_id')->references('id')->on('endereco');
         });
     }
 

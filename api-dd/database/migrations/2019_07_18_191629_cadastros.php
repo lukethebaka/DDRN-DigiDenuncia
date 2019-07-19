@@ -19,10 +19,10 @@ class Cadastros extends Migration
             $table->string('senha');
             $table->timestamps();
 
-            // $table->unsignedBigInteger('atuacao_id')->unsigned();
+            // $table->int('atuacao_id')->unsigned();
             // $table->foreign('atuacao_id')->references('id')->on('atuacao');
             
-            // $table->unsignedBigInteger('denuncia_id')->unsigned();
+            // $table->int('denuncia_id')->unsigned();
             // $table->foreign('denuncia_id')->references('id')->on('denuncia');
         });
     }

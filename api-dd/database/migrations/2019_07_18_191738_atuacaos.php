@@ -15,13 +15,8 @@ class Atuacaos extends Migration
     {
         Schema::create('atuacaos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('id_agente');
-            $table->string('senha');
+            $table->string('atuacao');
             $table->timestamps();
-
-
-            // $table->unsignedBigInteger('atuacaos_id')->unsigned();
-            // $table->foreign('atuacaos_id')->references('id')->on('atuacaos');
         });
     }
 
