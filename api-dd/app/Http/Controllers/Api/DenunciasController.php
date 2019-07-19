@@ -39,6 +39,7 @@ class DenunciasController extends Controller
         $denuncia->status = request('status');
         $denuncia->categoria_id = request('categoria_id');
         $denuncia->endereco_id = request('endereco_id');
+        $denuncia->imagem = request('imagem');
 
         $denuncia->save();
     }
@@ -51,6 +52,7 @@ class DenunciasController extends Controller
         $denuncia->status = request('status');
         $denuncia->categoria_id = request('categoria_id');
         $denuncia->endereco_id = request('endereco_id');
+        $denuncia->imagem = request('imagem');
 
         $denuncia->save();
     }
