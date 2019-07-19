@@ -12,24 +12,4 @@ class EnderecosController extends Controller
     {
         return Endereco::all();
     }
-
-    public function show(Endereco $id)
-    {
-        return $id;
-    }
-
-    public function store()
-    {
-        dd($request->all());
-    }
-
-    public function update(Endereco $id)
-    {
-        dd($request->all(id));
-    }
-
-    public function destroy(Endereco $id)
-    {
-        $id->delete();
-    }
 }

@@ -25,16 +25,26 @@ class DenunciasController extends Controller
 
     public function store()
     {
-        dd($request->all());
+        $denuncia = new Denuncia;
+
+        $denuncia->titulo_denuncias = request('titulo_denuncias');
+        $denuncia->status = request('status');
+
+        $denuncia->save();
     }
 
-    public function update(Denuncia $id)
+    public function update($id)
     {
-        dd($request->all(id));
+        $denuncia = Denuncia::findOrFail($id);
+
+        $denuncia->titulo_denuncias = request('titulo_denuncias');
+        $denuncia->status = request('status');
+
+        $denuncia->save();
     }
 
-    public function destroy(Denuncia $id)
+    public function delete($id)
     {
-        $id->delete();
+        Denuncia::findOrFail($id)->delete();
     }
 }

@@ -12,24 +12,4 @@ class CategoriasController extends Controller
     {
         return Categoria::all();
     }
-
-    public function show(Categoria $id)
-    {
-        return $id;
-    }
-
-    public function store()
-    {
-        dd($request->all());
-    }
-
-    public function update(Categoria $id)
-    {
-        dd($request->all(id));
-    }
-
-    public function destroy(Categoria $id)
-    {
-        $id->delete();
-    }
 }

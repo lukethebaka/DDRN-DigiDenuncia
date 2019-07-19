@@ -12,24 +12,4 @@ class AtuacaosController extends Controller
     {
         return Atuacao::all();
     }
-
-    public function show(Atuacao $id)
-    {
-        return $id;
-    }
-
-    public function store()
-    {
-        dd($request->all());
-    }
-
-    public function update(Atuacao $id)
-    {
-        dd($request->all(id));
-    }
-
-    public function destroy(Atuacao $id)
-    {
-        $id->delete();
-    }
 }
