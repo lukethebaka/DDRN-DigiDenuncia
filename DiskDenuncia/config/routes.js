@@ -1,46 +1,45 @@
-import { createStackNavigator } from 'react-navigation';
-import { StatusBar } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 import Home from '../pages/map';
-// import Data from '../pages/data';
-// import History from '../pages/history';
-// import Login from '../pages/login';
+import Login from '../pages/login';
+import History from '../pages/history';
+import Data from '../pages/login';
 
-export default createStackNavigator(
-{
-    Home: {
-        screen: Home,
-        navigationOptions: {
-        header: () => null,
-        },
-    },
-    // Data: {
-    //     screen: Data,
-    //     navigationOptions: {
-    //     headerTitle: 'Estatísticas',
-    //     },
-    // },
-    // History: {
-    //     screen: History,
-    //     navigationOptions: {
-    //     headerTitle: 'Histórico',
-    //     },
-    // },
-    // Login: {
-    //     screen: Login,
-    //     navigationOptions: {
-    //     headerTitle: 'Log-in policial',
-    //     },
-    // },
-    },
-    {
-    headerMode: 'screen',
-    },
-{
-    mode: 'modal',
-    cardStyle: {
-    paddingTop: StatusBar.currentHeight,
-    },
-    headerMode: 'none',
+export default createAppContainer(createMaterialBottomTabNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      // tabBarIcon: {},
+      // tabBarLabel: 'Mapa',
+    }
+  },
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      // tabBarIcon: {},
+      // tabBarLabel: 'Mapa',
+    }
+  },
+  History: {
+    screen: History,
+    navigationOptions: {
+      // tabBarIcon: {},
+      // tabBarLabel: 'Mapa',
+    }
+  },
+  Data: {
+    screen: Data,
+    navigationOptions: {
+      // tabBarIcon: {},
+      // tabBarLabel: 'Mapa',
+    }
+  },
 },
-);
+{
+  initialRouteName: "Home",
+  barStyle: { /* backgroundColor: '#', */},
+  inactiveColor: 'gray',
+  backBehavior: 'order',
+  color: '#ffffff',
+}));
