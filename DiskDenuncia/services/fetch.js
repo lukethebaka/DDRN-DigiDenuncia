@@ -30,6 +30,19 @@ export default {
     }
   },
   
+  async getMap(data) {
+    try {
+      let response = await fetch(
+        'https://nominatim.openstreetmap.org/search?q=' + data + '&state=Rio%20Grande%20do%20Norte&format=json&limit=1',
+      );
+      let responseJson = await response.json();
+      alert(JSON.stringify(responseJson[0].display_name));
+      return JSON.stringify(responseJson[0].display_name);
+    } catch (error) {
+      console.error(error);
+    }
+  },
+  
   async getCadastro(id) {
     try {
       let response = await fetch(URI + apiPath + 'cadastros/' + id);
