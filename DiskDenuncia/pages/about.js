@@ -22,19 +22,19 @@ export default class About extends React.Component {
         left: 0,
         width: '100%',
         height: '10%',
-        backgroundColor: '#363636',
+        backgroundColor: '#606060',
         alignItems: 'center',
         justifyContent: 'center',
       },
       headerText: {
-        color: 'white',
+        color: '#fff',
         fontSize: 23,
         fontWeight: 'bold',
       },
       title: {
         paddingHorizontal: 30,
         backgroundColor: 'transparent',
-        color: '#363636',
+        color: '#fff',
         fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'justify',
@@ -52,7 +52,7 @@ export default class About extends React.Component {
       titleIcons: {
         paddingHorizontal: 30,
         backgroundColor: 'transparent',
-        color: '#363636',
+        color: '#fff',
         fontSize: 15,
         fontWeight: 'bold',
         textAlign: 'center',
@@ -61,7 +61,7 @@ export default class About extends React.Component {
     });
 
     return (
-      <View style={{flex: 1, backgroundColor: '#d6d6d6'}}>
+      <View style={{flex: 1, backgroundColor: '#606060'}}>
         <View style={this.styles.header}>
           <Text style={this.styles.headerText}>Informações</Text>
         </View>
@@ -104,10 +104,10 @@ export default class About extends React.Component {
           </View>
           <Text style={this.styles.titleIcons}>Icons providenciados pelo icons8.com</Text>
           <Button
-            style={{ backgroundColor: '#2d0' }}
+            style={{ backgroundColor: '#fff' }}
             onPress={this._navigate}
           >
-            Login
+            Login policial
           </Button>
         </ScrollView>
       </View>

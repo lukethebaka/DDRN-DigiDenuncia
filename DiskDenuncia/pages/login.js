@@ -31,28 +31,28 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#545454', paddingTop: '50%', paddingBottom: '10%' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'space-between', backgroundColor: '#808080', paddingTop: '50%', paddingBottom: '10%' }}>
         <Image
-          style={{width: 50, height: 50}}
-          source={require('../assets/icon.png')}
+          style={{width: 70, height: 70}}
+          source={require('../assets/iconpolicial.png')}
         />
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, width: '70%', paddingHorizontal: 10, borderColor: 'white', borderWidth: 1, borderRadius: 20}}
           onChangeText={(code) => this.setState({code})}
-          placeholder={'Useless Placeholder'}
+          placeholder={'N° Registro'}
           value={this.state.code}
         />
         <TextInput
-          style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+          style={{height: 40, borderColor: 'white', borderWidth: 1, paddingHorizontal: 10, width: '70%', borderRadius: 20}}
           onChangeText={(password) => this.setState({password})}
-          placeholder={'Useless Placeholder'}
+          placeholder={'Senha'}
           value={this.state.password}
         />
         <Button
           onPress={this._requestUser}
-          title="Learn More"
+          title="Entrar"
           color="#841584"
-          accessibilityLabel="Learn more about this purple button"
+          accessibilityLabel="Acessar plataforma policial"
         />
       </View>
     );

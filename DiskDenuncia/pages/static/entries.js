@@ -2,51 +2,16 @@ export const ENTRIES1 = [
     {
         title: 'Crimes Ambientas',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        illustration: require('../../assets/iconesCrime/ambientais.png')
+        illustration: 'https://icaranews.com.br/wp-content/uploads/2018/02/28080384_2048144128776403_268639900_o-640x424.jpg'
     },
     {
         title: 'Porte e/ou Comércio de armas de fogo/munições',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/arma.png')
+        subtitle: 'Seu vizinho tem uma arma pesada? Você viu uma metralhadora? Alguém que não tem porte adiquiriu uma arma ou está vendendo? Use essa categoria para ualquer denúncia relacionada a armas de fogo',
+        illustration: 'https://amazonasatual.com.br/wp-content/uploads/2018/05/armas.jpg'
     },
     {
         title: 'Assassinato',
         subtitle: 'Lorem ipsum dolor sit amet et nuncat ',
-        illustration: require('../../assets/iconesCrime/assassinato.png')
-    },
-    {
-        title: 'Corrupção',
-        subtitle: 'Lorem ipsum dolor sit amet et nuncat mergitur',
-        illustration: require('../../assets/iconesCrime/corrupção.png')
-    },
-    {
-        title: 'Foragido',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/crimes.png')
-    },
-    {
-        title: 'Assalto/Furto',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/foragido.png')
-    },
-    {
-        title: 'Invasão de propriedade',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/furto.png')
-    },
-    {
-        title: 'Tráfico de Drogas',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/invasão.png')
-    },
-    {
-        title: 'Violência contra mulher/criança/idoso',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/tráfico.png')
-    },
-    {
-        title: 'Demais crimes',
-        subtitle: 'Lorem ipsum dolor sit amet',
-        illustration: require('../../assets/iconesCrime/violência.png')
-    },
+        illustration: 'https://afolhatorres.com.br/wp-content/uploads/2018/10/mortes_gimik.jpg'
+    }
 ];

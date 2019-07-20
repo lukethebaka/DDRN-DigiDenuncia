@@ -61,7 +61,7 @@ export default class App extends React.Component {
           borderRadius: 45,
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#009c37',
+          backgroundColor: '#333399',
         }}>
           <TouchableWithoutFeedback
             onPress={this.toggleModal}
@@ -131,7 +131,7 @@ export default class App extends React.Component {
 
               <Text style={{marginBottom: 5, fontSize: 20, fontWeight: 'bold'}}>Tipo do crime</Text>
               <Picker
-                style={{ height: 40, marginBottom: 40, borderWidth: 5, borderColor: '#009c37', backgroundColor: '#fff', textAlign: 'left'}}
+                style={{ height: 40, marginBottom: 40, borderWidth: 5, borderColor: '#009c37', textAlign: 'left'}}
                 selectedValue={this.state.tipoCrime}
                 onValueChange={(itemValue, itemIndex) =>
                   this.setState({tipoCrime: itemValue})

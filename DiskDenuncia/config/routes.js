@@ -44,17 +44,6 @@ export default createAppContainer(createMaterialBottomTabNavigator({
       tabBarLabel: 'Mapa',
     }
   },
-  About: {
-    screen: AboutStack,
-    navigationOptions: {
-      tabBarIcon: ({ tintColor }) => (  
-        <View>
-          <Icon style={[{color: tintColor}]} size={25} name={'info'}/>  
-        </View>
-      ),
-      tabBarLabel: 'Sobre',
-    }
-  },
   History: {
     screen: History,
     navigationOptions: {
@@ -77,12 +66,24 @@ export default createAppContainer(createMaterialBottomTabNavigator({
       tabBarLabel: 'Estatísticas',
     }
   },
+  About: {
+    screen: AboutStack,
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => (  
+        <View>
+          <Icon style={[{color: tintColor}]} size={25} name={'info'}/>  
+        </View>
+      ),
+      tabBarLabel: 'Sobre',
+
+    }
+  },
 },
 {
   initialRouteName: "Home",
-  barStyle: { backgroundColor: '#009c37' },
-  activeColor: '#fee000',
-  inactiveColor: '#fff',
+  barStyle: { backgroundColor: '#fff' },
+  activeColor: '#333399',
+  inactiveColor: '#363636',
   backBehavior: 'order',
   color: '#ffffff',
 }));
