@@ -1,9 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Dimensions, ScrollView } from 'react-native';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
-import CrimeCarousel from './index'
-import { LineChart, PieChart, ContributionGraph, StackedBarChart
-} from 'react-native-chart-kit'
+import CrimeCarousel from './index';
+import { PieChart, StackedBarChart } from 'react-native-chart-kit';
 
 export default class Statistics extends React.Component {
   constructor(props) {
@@ -17,11 +15,12 @@ export default class Statistics extends React.Component {
         left: 0,
         width: '100%',
         height: '10%',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#363636',
         alignItems: 'center',
         justifyContent: 'center',
       },
       headerText: {
+        color: '#fff',
         fontSize: 23,
         fontWeight: 'bold',
       },
@@ -61,10 +60,10 @@ export default class Statistics extends React.Component {
     return (
       <View style={{flex: 1, backgroundColor: '#d6d6d6'}}>
         <View style={this.styles.header}>
-          <Text style={this.styles.headerText}>Dados e Históricos</Text>
+          <Text style={this.styles.headerText}>Dados Estatísticos</Text>
         </View>
         <ScrollView>
-          <CrimeCarousel/>
+          <CrimeCarousel />
           <Text style={this.styles.title}>Índice de Violência</Text>
           <StackedBarChart
             style={{

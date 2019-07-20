@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Platform, View, ScrollView, Text, StatusBar, SafeAreaView } from 'react-native';
-import Carousel, { Pagination } from 'react-native-snap-carousel';
+import Carousel from 'react-native-snap-carousel';
 import { sliderWidth, itemWidth } from './styles/SliderEntry.style';
 import SliderEntry from './components/SliderEntry';
-import styles, { colors } from './styles/index.style';
-import { ENTRIES1, ENTRIES2 } from './static/entries';
-import { scrollInterpolators, animatedStyles } from './utils/animations';
+import styles from './styles/index.style';
+import { ENTRIES1 } from './static/entries';
 
-const IS_ANDROID = Platform.OS === 'android';
 const SLIDER_1_FIRST_ITEM = 0;
 
 export default class CrimeCarousel extends React.Component {
